@@ -49,6 +49,18 @@ void ABFXCharacter::EndCrouch()
 	UnCrouch();
 }
 
+FVector ABFXCharacter::GetPawnViewLocation() const
+{
+	if (CameraComp)
+	{
+		return CameraComp->GetComponentLocation();
+	}
+	else
+	{
+		return Super::GetPawnViewLocation();
+	}
+}
+
 // Called every frame
 void ABFXCharacter::Tick(float DeltaTime)
 {

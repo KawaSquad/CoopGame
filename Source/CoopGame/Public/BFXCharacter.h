@@ -28,6 +28,8 @@ protected:
 	void BeginCrouch();
 	void EndCrouch();
 
+	virtual FVector GetPawnViewLocation()const override;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component")
 	UCameraComponent * CameraComp;
 
